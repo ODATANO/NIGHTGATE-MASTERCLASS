@@ -1,0 +1,24 @@
+{
+  "name": "nightgate-masterclass",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A mini attestation vault on Midnight preview, deployed and called with nothing but an API key for the hosted NIGHTGATE API.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "key": "node scripts/key.mjs",
+    "deploy": "node scripts/deploy.mjs",
+    "attest": "node scripts/attest.mjs",
+    "prove": "node scripts/prove.mjs",
+    "verify": "node scripts/verify.mjs",
+    "agent": "node scripts/agent.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@midnight-ntwrk/compact-runtime": "0.21.0",
+    "@odatano/nightgate-tx": "0.24.1"
+  }
+}

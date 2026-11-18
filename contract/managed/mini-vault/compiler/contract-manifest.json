@@ -1,0 +1,79 @@
+{
+  "manifest-version": "1",
+  "compiler-version": "0.36.0",
+  "compiler-commit": "b5d9e4dfc532fe47011c4f6296e254f4853eb469",
+  "language-version": "0.28.0",
+  "runtime-version": "0.21.0",
+  "compiler": {
+    "type": "directory",
+    "contract-info.json": {
+      "type": "file",
+      "size": 5722,
+      "hash": "7ef3c8c9a33aafe3d6d72cf26996f891bc2e4eab2210b6cc995df3ed206328f3"
+    }
+  },
+  "contract": {
+    "type": "directory",
+    "index.d.ts": {
+      "type": "file",
+      "size": 4170,
+      "hash": "5b2b44064ded4280a92ea750cd72fc5071d1badc8c21072e454e7f5426fe21c0"
+    },
+    "index.js": {
+      "type": "file",
+      "size": 63477,
+      "hash": "dfd2adcdb1effd2dd13a35cbdf765cc00cc29308aeb0df367007619d53e15c8a"
+    },
+    "index.js.map": {
+      "type": "file",
+      "size": 3162,
+      "hash": "539e223fd0b2fbf25f413e7e129c69dfff2a4c45467992af0ade092789a48698"
+    }
+  },
+  "zkir": {
+    "type": "directory",
+    "attest.bzkir": {
+      "type": "file",
+      "size": 970,
+      "hash": "6b80daddd512098c8bbfd2049735aa5eeaab35ddfb222b381f4210f9fb90ad00"
+    },
+    "attest.zkir": {
+      "type": "file",
+      "size": 3575,
+      "hash": "7b9b839c4fb712da7e133bb7707c696a10d6ff9e524c13dfd7ac230ebaf52ff6"
+    },
+    "proveField.bzkir": {
+      "type": "file",
+      "size": 2118,
+      "hash": "43261040d4439b345abcecba3bfa9d8c42b0555f197ca432854079555ff8be31"
+    },
+    "proveField.zkir": {
+      "type": "file",
+      "size": 7109,
+      "hash": "e537cd5cb0cd9debd6c34bf3f2e447ba2184c0219b16abc2a204df7f0377a6a2"
+    }
+  },
+  "keys": {
+    "type": "directory",
+    "attest.prover": {
+      "type": "file",
+      "size": 888474,
+      "hash": "c41a3cd15e685fc98ff52e6f14e0583d33d10a448ad4d631ba4c66539e0d6b1e"
+    },
+    "attest.verifier": {
+      "type": "file",
+      "size": 1353,
+      "hash": "b93167bb7cfa0a8492bc94af1f4292d9e97391c88470d5dc0ebf99f72a57d141"
+    },
+    "proveField.prover": {
+      "type": "file",
+      "size": 1774358,
+      "hash": "630923880c3247f4624bc3cfce8a16ac70843a2350d8109effb6e5470f79095b"
+    },
+    "proveField.verifier": {
+      "type": "file",
+      "size": 1353,
+      "hash": "9ccf7d9cfe933b308ece054e0e022a86950bd0f5f4ddd6c889afbbc87b14d012"
+    }
+  }
+}
