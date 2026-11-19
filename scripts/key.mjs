@@ -19,7 +19,9 @@ async function show(key) {
     const me = await response.json();
     const free = me.freeToday?.midnight;
     console.log(`key ${me.prefix}… on ${NETWORK} (${BASE})`);
-    console.log(`  calls left: ${me.unlimited ? 'unlimited' : me.unitsLeft}${free != null ? `, plus ${free} free today` : ''}`);
+    if (free) console.log(`  free calls today: ${free.left} of ${free.limit}`);
+    if (me.unlimited) console.log('  calls left: unlimited');
+    else if (!free || me.unitsLeft > 0) console.log(`  ${free ? 'calls on the key' : 'calls left'}: ${me.unitsLeft}`);
     if (me.validUntil) console.log(`  valid until ${String(me.validUntil).slice(0, 10)}`);
 }
 
