@@ -1,16 +1,23 @@
-// Step 5: let an AI agent use the same key through the NIGHTGATE MCP server.
+// Step 5: let an AI agent use the same key and the same seed through the NIGHTGATE MCP server.
 //   npm run agent      writes .mcp.json for an MCP client started in this folder
 import fs from 'node:fs';
 import path from 'node:path';
-import { BASE, NETWORK, ROOT, run, token } from '../src/lib.mjs';
+import { BASE, NETWORK, ROOT, SEED_FILE, run, seedHex, stop, token } from '../src/lib.mjs';
+
+const SERVER = path.join(ROOT, 'node_modules', '@odatano', 'nightgate-mcp', 'dist', 'index.js');
 
 run(async () => {
+    const key = token();
+    if (!fs.existsSync(SERVER)) stop('The MCP server is not installed yet. Run:  npm install');
+    const seed = seedHex();
+    // A seed from the environment is handed over as it is. Otherwise the server reads your seed file.
+    const identity = process.env.NIGHTGATE_SEED_HEX ? { NIGHTGATE_SEED_HEX: seed } : { NIGHTGATE_SEED_FILE: SEED_FILE };
     const config = {
         mcpServers: {
             nightgate: {
-                command: 'npx',
-                args: ['-y', '@odatano/nightgate-mcp'],
-                env: { ODATANO_ACCESS_KEY: token(), ODATANO_ACCESS_URL: BASE, NIGHTGATE_NETWORK: NETWORK },
+                command: process.execPath,
+                args: [SERVER],
+                env: { ODATANO_ACCESS_KEY: key, ODATANO_ACCESS_URL: BASE, NIGHTGATE_NETWORK: NETWORK, ...identity },
             },
         },
     };

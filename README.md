@@ -123,14 +123,15 @@ await connect(api).sponsorUnbound({ unboundTxB64: built.unboundTxB64, idempotenc
 
 `npm run agent` writes `.mcp.json` with the
 [NIGHTGATE MCP server](https://www.npmjs.com/package/@odatano/nightgate-mcp) on
-preview and your key. Start an MCP client in this folder, for example
-`claude`, and ask:
+preview, your key and the path of your seed. Start an MCP client in this
+folder, for example `claude`, and ask:
 
 - "Who am I on Midnight?"
 - "Anchor README.md on Midnight and verify it afterwards."
 - "How many calls does my key have left?"
 
-The server builds and proves on your machine as well, and the same pool pays.
+The server builds and proves on your machine as well, with the same seed, and
+the same pool pays. It comes with `npm install`.
 
 ## What your key can do
 

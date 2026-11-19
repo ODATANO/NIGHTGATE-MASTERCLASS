@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@midnight-ntwrk/compact-runtime": "0.21.0",
+    "@odatano/nightgate-mcp": "0.23.1",
     "@odatano/nightgate-tx": "0.24.1"
   }
 }

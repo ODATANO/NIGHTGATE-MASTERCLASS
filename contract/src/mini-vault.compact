@@ -52,10 +52,6 @@ witness record_values(record_id: Bytes<32>): Vector<4, Uint<64>>;
 witness record_salt(record_id: Bytes<32>): Bytes<32>;
 
 // Pure circuits: the same hashes off-chain and in the proof 
-//
-// transientHash is the hash that is cheap inside a proof. It keeps the prover
-// keys small and a proof takes seconds. Always compute these values through
-// the compiled circuits below, never with another implementation.
 
 // The public identity of a secret. One-way, so the secret stays private.
 export pure circuit ownerIdOf(secret: Bytes<32>): Bytes<32> {

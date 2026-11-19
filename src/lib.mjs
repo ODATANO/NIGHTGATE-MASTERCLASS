@@ -21,7 +21,7 @@ export const OPS = { max: 0n, min: 1n };
 export const SIGN = { 0: '<=', 1: '>=' };
 
 const VAULT_DIR = at('.vault');
-const SEED_FILE = at('.vault', 'seed.hex');
+export const SEED_FILE = at('.vault', 'seed.hex');
 const ADDRESS_FILE = at('.vault', 'vault.txt');
 const RECORDS_DIR = at('.vault', 'records');
 
